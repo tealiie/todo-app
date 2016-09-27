@@ -1,21 +1,15 @@
-// adding new task
-
 import React from 'react'
 
-export default React.createClass({
-propTypes:{
-  header:React.PropTypes.String.isRequired,
-},
+const Task = React.createClass({
 
-render()  {
-  return (
-<title>To Do</title>
+  render: function() {
+    return (
+      <form>
+        <input placeholder='task here' />
+        <button>Add Task</button>
+      </form>
+    )
+  }
+});
 
-<form> Add Task<br>
-  <input type="text" name="firstname"><br>
-  <input type="submit" value="Submit">
-</form>
-  )
-
-}
-})
+export default Task
