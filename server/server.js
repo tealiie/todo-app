@@ -10,7 +10,7 @@ var app = express()
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '../public')))
 
-app.get()
+app.get('/v1/tasks', routes.getList)
 
 app.listen(PORT, function () {
   console.log('Listening on port', PORT)

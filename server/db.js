@@ -1,10 +1,11 @@
-var fs = require('fs')
+var config = require('../knexfile').development
+var db = require('knex')(config)
+var path = require('path')
 
 module.exports = {
-
+  getTask:   getTask
 }
 
-
-function () {
-
+function getTask() {
+  return db('todo').select()
 }
