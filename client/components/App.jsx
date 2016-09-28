@@ -1,16 +1,24 @@
 import React from 'react'
-
-import Header from './Header.jsx'
-import Task from './Task.jsx'
-// import TaskList from './TaskList.jsx'
+import Header from './Header'
+import AddTask from './AddTask'
+import TaskList from './TaskList'
 
 export default React.createClass ({
+  getInitialState () {
+    return {
+      tasks: [{
+        id: 1,
+        text: 'some text',
+        isComplete: false
+      }]
+    }
+  },
   render () {
     return (
       <div className="container">
         <Header text="PitBull ToDo" />
-        <Task />
-        {/* <TaskList /> */}
+        <AddTask />
+        <TaskList tasks={this.state.tasks}/>
       </div>
     )
   }
