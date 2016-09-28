@@ -7,7 +7,7 @@ const TaskList = React.createClass({
         <ul className="theList">
           {this.props.tasks.map((task)=>{
             return (
-              <TaskItem text={task.text} key={task.id}/>
+              <TaskItem text={task.task} key={task.id}/>
             )
           })}
         </ul>
